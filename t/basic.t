@@ -35,7 +35,7 @@ computing 3
 	return 1 * 2
 return 2 * 3
 OUTPUT
-	
+
 	{
 		open my $h, ">", \$output;
 		local *STDERR = $h;
