@@ -9,7 +9,7 @@ use warnings;
 use vars qw/$VERSION @EXPORT_OK $STRING/;
 
 BEGIN {
-	$VERSION = "0.02";
+	$VERSION = "0.03";
 	
 	@EXPORT_OK = qw/indent $STRING/;
 
@@ -36,7 +36,7 @@ sub new {
 
 		$SIG{__WARN__} = sub {
 			my $str = shift;
-			$str =~ s/^/$STRING x ($count - 1)/ge;
+			$str =~ s/^/$STRING x ($count - 1)/gme;
 			&$delegate($str);
 		};
 	}
@@ -117,6 +117,12 @@ level:
 The string to repeat (defaults to C<"\t">).
 
 =back
+
+=head1 VERSION CONTROL
+
+This module is maintained using Darcs. You can get the latest version from
+L<http://nothingmuch.woobling.org/Devel-STDERR-Indent/>, and use C<darcs send>
+to commit changes.
 
 =cut
 

@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.50.
+signed via the Module::Signature module, version 0.55.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -16,14 +16,14 @@ Hash: SHA1
 
 SHA1 324d79753903abf55112ebb3daf26f92ba6d2df2 Build.PL
 SHA1 e4bcac2bb332bb936943ae0f0e55a99a8df02799 MANIFEST
-SHA1 0b262a22eb782164b24524422c145a379b13fa4d META.yml
-SHA1 0ffd6e04c7ffa4ee8744a91929ff04099681ff58 Makefile.PL
-SHA1 94f95ad241e3fc3c446532d97767a5100745a1c5 lib/Devel/STDERR/Indent.pm
+SHA1 24275a3ee2649485fd000564f5af17c14957c1b0 META.yml
+SHA1 06525b83fc12ec60f805385aa76a41516ab19dbe Makefile.PL
+SHA1 32dbffcb7983b1c425715f31ad94ae4a3621a8dd lib/Devel/STDERR/Indent.pm
 SHA1 88dbd6d2c992ad186149502a117da7e6aed6c756 t/basic.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (Darwin)
+Version: GnuPG v1.4.7 (Darwin)
 
-iD8DBQFDLUHIVCwRwOvSdBgRAvwyAJsFtTlYmb3DXrS2vYRpPlFyBLdRgACgreut
-/134RGE8Z/Sjs/hUv4IF08E=
-=xQaB
+iD8DBQFG5bj8VCwRwOvSdBgRAr3NAJ44GgbYuLKUyehzpRrFBpFtjWub9ACgq8Ch
+d0Um7/rCS+AUc19WYS7mzCI=
+=Jtsj
 -----END PGP SIGNATURE-----

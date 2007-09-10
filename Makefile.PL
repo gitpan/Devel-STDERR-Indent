@@ -6,6 +6,7 @@ WriteMakefile
           'VERSION_FROM' => 'lib/Devel/STDERR/Indent.pm',
           'PREREQ_PM' => {},
           'INSTALLDIRS' => 'site',
+          'EXE_FILES' => [],
           'PL_FILES' => {}
         )
 ;

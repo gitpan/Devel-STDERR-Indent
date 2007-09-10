@@ -1,13 +1,18 @@
 ---
 name: Devel-STDERR-Indent
-version: 0.02
-author: ~
+version: 0.03
+author: []
 abstract: Indents STDERR to aid in print-debugging recursive algorithms.
 license: perl
+resources:
+  license: http://dev.perl.org/licenses/
 requires:
-  perl: >= 5.005
+  perl: '>= 5.005'
 provides:
   Devel::STDERR::Indent:
     file: lib/Devel/STDERR/Indent.pm
-    version: 0.02
-generated_by: Module::Build version 0.2611
+    version: 0.03
+generated_by: Module::Build version 0.2808
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
