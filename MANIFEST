@@ -4,4 +4,3 @@ MANIFEST			This list of files
 t/basic.t
 META.yml
 Makefile.PL
-SIGNATURE    Added here by Module::Build
