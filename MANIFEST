@@ -1,6 +1,8 @@
-Build.PL
+Changes
 lib/Devel/STDERR/Indent.pm
-MANIFEST			This list of files
-t/basic.t
-META.yml
 Makefile.PL
+MANIFEST			This list of files
+MANIFEST.SKIP
+t/basic.t
+META.yml                                 Module meta-data (added by MakeMaker)
+SIGNATURE                                Public-key signature (added by MakeMaker)

@@ -1,11 +1,22 @@
 --- #YAML:1.0
-name:                Devel-STDERR-Indent
-version:             0.04
-abstract:            ~
-license:             ~
-generated_by:        ExtUtils::MakeMaker version 6.32
-distribution_type:   module
-requires:     
+name:               Devel-STDERR-Indent
+version:            0.05
+abstract:           ~
+author:  []
+license:            unknown
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
+requires:
+    Moose:             0
+    namespace::clean:  0
+    Sub::Exporter:     0
+    Task::Weaken:      0
+no_index:
+    directory:
+        - t
+        - inc
+generated_by:       ExtUtils::MakeMaker version 6.48
 meta-spec:
-    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
-    version: 1.2
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4
