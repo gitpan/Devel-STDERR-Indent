@@ -3,6 +3,8 @@
 package Devel::STDERR::Indent;
 use Moose;
 
+no warnings 'recursion';
+
 use Scalar::Util qw(weaken);
 
 use namespace::clean -except => "meta";
@@ -11,7 +13,7 @@ use Sub::Exporter -setup => {
 	exports => [qw(indent)],
 };
 
-our $VERSION = "0.05";
+our $VERSION = "0.06";
 
 sub indent {
 	my $h = __PACKAGE__->new(@_);
@@ -42,13 +44,13 @@ has indent_string => (
 has enter_string => (
 	isa => "Str",
 	is  => "ro",
-	default => "--> ",
+	default => " -> ",
 );
 
 has leave_string => (
 	isa => "Str",
 	is  => "ro",
-	default => "<-- ",
+	default => " <- ",
 );
 
 has _previous_hook => (
@@ -135,8 +137,13 @@ sub should_indent {
 	# always indent if there's an enter/leave message
 	return 1 if $self->has_message;
 
-	# indent if we're nested	
-	return 1 if $self->_has_previous_hook and $self->_previous_hook->isa("Devel::STDERR::Indent::Hook");
+	# indent if we're nested
+	if ( $self->_has_previous_hook ) {
+		my $hook = $self->_previous_hook;
+		if ( blessed($hook) and $hook->isa("Devel::STDERR::Indent::Hook") ) {
+			return 1;
+		}
+	}
 
 	# otherwise we're at the top level, don't indent unnecessarily, it's distracting
 	return;
@@ -282,11 +289,11 @@ Defaults to C<'    '> (four spaces).
 
 =item enter_string
 
-Defaults to C<< '--> '>>.
+Defaults to C<< ' -> ' >>.
 
 =item leave_string
 
-Defaults to C<< '<-- '>>.
+Defaults to C<< ' <- ' >>.
 
 =back
 
